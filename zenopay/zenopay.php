@@ -38,5 +38,5 @@ function make_payment($phone_number, $amount)
         logError("Error: Unable to connect to the API endpoint.");
     }
     error_log( $response);
-    return $response;
+    return json_decode($response);
 }
