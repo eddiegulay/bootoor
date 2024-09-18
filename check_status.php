@@ -34,6 +34,8 @@ if (isset($data['chat_id'])) {
 
     error_log(json_encode($data));
 
+    echo json_encode(['text' => $response_message, 'message' => 'Status checked']);
+
 } else {
     error_log(json_encode(['status' => 'error', 'message' => 'Invalid request']));
 }

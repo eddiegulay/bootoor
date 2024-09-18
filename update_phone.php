@@ -22,10 +22,10 @@ if (isset($data['chat_id'])) {
 
     $status = make_payment($phoneNumber, $amount);
 
-    if ($status['status'] == 'success') {
+    if ($status->status == 'success') {
         $response_message = "Utapokea ujumbe wa kuthibitisha malipo. Ingiza PIN yako kukamilisha malipo.";
 
-        $order_id = $status['order_id'];
+        $order_id = $status->order_id;
 
         $stmt = $conn->prepare("UPDATE conversation_flow SET order_id = ? WHERE chatId = ?");
         $stmt->execute([$order_id, $chatId]);
