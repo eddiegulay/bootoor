@@ -22,7 +22,7 @@ if (isset($data['chat_id'])) {
 
     $amount_rate = $amount * 0.1;
 
-    $response_message = " ingiza nambari ya simu kutuma kiasi $amount /- kwa makato TZS $amount_rate /-  kwenda kwa $receiver Mwenye taarifa za benki zifuatazo: $bank_details";
+    $response_message = "Ingiza namba ya simu kutuma kiasi $amount /- kwa makato TZS $amount_rate /-  kwenda kwa $receiver Mwenye taarifa za benki zifuatazo: $bank_details";
 
     echo json_encode(['text' => $response_message, 'message' => 'Amount updated']);
 } else {
